@@ -79,7 +79,7 @@ src/
    npm run start
    ```
 
-The API will be available at `http://localhost:5000`
+The API will be available at `https://fintrack-app-g6pc.onrender.com`
 
 ## User Roles and Permissions
 
@@ -633,57 +633,57 @@ Use Postman or cURL to test endpoints:
 
 ```bash
 # Register user
-curl -X POST http://localhost:5000/api/v1/auth/register \
+curl -X POST https://fintrack-app-g6pc.onrender.com/api/v1/auth/register \
   -H "Content-Type: application/json" \
   -d '{"name":"John","email":"john@example.com","password":"pass123","role":"analyst"}'
 
 # Login
-curl -X POST http://localhost:5000/api/v1/auth/login \
+curl -X POST https://fintrack-app-g6pc.onrender.com/api/v1/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"john@example.com","password":"pass123"}'
 
 # Get all users (admin only - use admin token)
-curl -X GET http://localhost:5000/api/v1/users \
+curl -X GET https://fintrack-app-g6pc.onrender.com/api/v1/users \
   -H "Authorization: Bearer <ADMIN_TOKEN>"
 
 # Get user statistics (admin only)
-curl -X GET http://localhost:5000/api/v1/users/stats/overview \
+curl -X GET https://fintrack-app-g6pc.onrender.com/api/v1/users/stats/overview \
   -H "Authorization: Bearer <ADMIN_TOKEN>"
 
 # Get single user by ID
-curl -X GET http://localhost:5000/api/v1/users/:id \
+curl -X GET https://fintrack-app-g6pc.onrender.com/api/v1/users/:id \
   -H "Authorization: Bearer <TOKEN>"
 
 # Update user profile
-curl -X PUT http://localhost:5000/api/v1/users/:id \
+curl -X PUT https://fintrack-app-g6pc.onrender.com/api/v1/users/:id \
   -H "Authorization: Bearer <TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{"name":"John Updated","email":"john.updated@example.com"}'
 
 # Change user role (admin only)
-curl -X PATCH http://localhost:5000/api/v1/users/:id/role \
+curl -X PATCH https://fintrack-app-g6pc.onrender.com/api/v1/users/:id/role \
   -H "Authorization: Bearer <ADMIN_TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{"role":"admin"}'
 
 # Deactivate user (admin only)
-curl -X PATCH http://localhost:5000/api/v1/users/:id/status \
+curl -X PATCH https://fintrack-app-g6pc.onrender.com/api/v1/users/:id/status \
   -H "Authorization: Bearer <ADMIN_TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{"isActive":false}'
 
 # Delete user (admin only)
-curl -X DELETE http://localhost:5000/api/v1/users/:id \
+curl -X DELETE https://fintrack-app-g6pc.onrender.com/api/v1/users/:id \
   -H "Authorization: Bearer <ADMIN_TOKEN>"
 
 # Create financial record (use token from login response)
-curl -X POST http://localhost:5000/api/v1/records \
+curl -X POST https://fintrack-app-g6pc.onrender.com/api/v1/records \
   -H "Authorization: Bearer <TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{"amount":5000,"type":"income","category":"salary"}'
 
 # Get dashboard summary
-curl -X GET http://localhost:5000/api/v1/dashboard/summary \
+curl -X GET https://fintrack-app-g6pc.onrender.com/api/v1/dashboard/summary \
   -H "Authorization: Bearer <TOKEN>"
 ```
 
