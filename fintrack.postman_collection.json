@@ -1,0 +1,612 @@
+{
+  "info": {
+    "_postman_id": "a4c47460-dc72-4183-a802-769a4f4a598b",
+    "name": "fintrack",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32022384"
+  },
+  "item": [
+    {
+      "name": "user routes",
+      "item": [
+        {
+          "name": "get all user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNjg0OSwiZXhwIjoxNzc1NDAzMjQ5fQ.b5XvHR71wLTHHoflFSdbRTqCVOu6mJBY9VLOCFLkC6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/users",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get user statistics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNjg0OSwiZXhwIjoxNzc1NDAzMjQ5fQ.b5XvHR71wLTHHoflFSdbRTqCVOu6mJBY9VLOCFLkC6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/users/stats/overview",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "stats",
+                "overview"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update user profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNjg0OSwiZXhwIjoxNzc1NDAzMjQ5fQ.b5XvHR71wLTHHoflFSdbRTqCVOu6mJBY9VLOCFLkC6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/users/69ceaf281b09208d9f811f81",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "69ceaf281b09208d9f811f81"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "change user role",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNjg0OSwiZXhwIjoxNzc1NDAzMjQ5fQ.b5XvHR71wLTHHoflFSdbRTqCVOu6mJBY9VLOCFLkC6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"role\": \"viewer\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/users/69ceaf281b09208d9f811f81/role",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "69ceaf281b09208d9f811f81",
+                "role"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "toggle user status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNjg0OSwiZXhwIjoxNzc1NDAzMjQ5fQ.b5XvHR71wLTHHoflFSdbRTqCVOu6mJBY9VLOCFLkC6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"isActive\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/users/69ceaf281b09208d9f811f81/status",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "69ceaf281b09208d9f811f81",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete user",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNjg0OSwiZXhwIjoxNzc1NDAzMjQ5fQ.b5XvHR71wLTHHoflFSdbRTqCVOu6mJBY9VLOCFLkC6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/users/69ceaf281b09208d9f811f81",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "69ceaf281b09208d9f811f81"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "financial route",
+      "item": [
+        {
+          "name": "create record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNTMxOCwiZXhwIjoxNzc1NDAxNzE4fQ.4Wz-QjoSzDvF82OM5NkM8hh3Z3YZc6m2nl-7NVMqCyc",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"amount\": 30000,\r\n    \"type\": \"expense\",\r\n    \"category\": \"rent\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/records/",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "records",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get records",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2YyZDkyZTFkYmRhNWI2MTgyODBkMCIsInJvbGUiOiJhbmFseXN0IiwiaWF0IjoxNzc1MzE2MzUzLCJleHAiOjE3NzU0MDI3NTN9.jwLJKTgMsbXdH4qTEnxzAh4dZPvu_Ei4m_rShzCwwaY",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/records/",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "records",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get record by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2YyZDkyZTFkYmRhNWI2MTgyODBkMCIsInJvbGUiOiJhbmFseXN0IiwiaWF0IjoxNzc1MzE2MzUzLCJleHAiOjE3NzU0MDI3NTN9.jwLJKTgMsbXdH4qTEnxzAh4dZPvu_Ei4m_rShzCwwaY",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/records/69d139bad23d741b41ec3b57",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "records",
+                "69d139bad23d741b41ec3b57"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update record",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNjg0OSwiZXhwIjoxNzc1NDAzMjQ5fQ.b5XvHR71wLTHHoflFSdbRTqCVOu6mJBY9VLOCFLkC6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"amount\":10000,\r\n    \"type\": \"income\",\r\n    \"category\": \"Intrest\",\r\n    \"notes\": \"we got some Intrest\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/records/69d139bad23d741b41ec3b57",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "records",
+                "69d139bad23d741b41ec3b57"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete record",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2VhZWMyMWIwOTIwOGQ5ZjgxMWY3YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMxNjg0OSwiZXhwIjoxNzc1NDAzMjQ5fQ.b5XvHR71wLTHHoflFSdbRTqCVOu6mJBY9VLOCFLkC6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/records/69cec7131b09208d9f811fa4",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "records",
+                "69cec7131b09208d9f811fa4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "dashboard",
+      "item": [
+        {
+          "name": "get dashboard summry",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDEyOGM1ZDUzNzEzYWM2ZTU2ZjQ3YyIsInJvbGUiOiJ2aWV3ZXIiLCJpYXQiOjE3NzUzMTU1ODgsImV4cCI6MTc3NTQwMTk4OH0.Nt7_n2RUGLwrmhIxcB2PwJJ0GDvvp81hDN8dZ4xHyQE",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/dashboard/summary",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "dashboard",
+                "summary"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get category breakdown",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2YyZDkyZTFkYmRhNWI2MTgyODBkMCIsInJvbGUiOiJhbmFseXN0IiwiaWF0IjoxNzc1MzE5MjQzLCJleHAiOjE3NzU0MDU2NDN9.JQu_ZZTMYtpy5d4rCt725WI-ktmSTI-xVYU-yGN4eO0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/dashboard/categories",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "dashboard",
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "comparison",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2YyZDkyZTFkYmRhNWI2MTgyODBkMCIsInJvbGUiOiJhbmFseXN0IiwiaWF0IjoxNzc1MzE5MjQzLCJleHAiOjE3NzU0MDU2NDN9.JQu_ZZTMYtpy5d4rCt725WI-ktmSTI-xVYU-yGN4eO0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/dashboard/comparison",
+              "protocol": "https",
+              "host": [
+                "fintrack-app-g6pc",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "dashboard",
+                "comparison"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"test4\",\r\n    \"email\": \"test4@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"role\":\"viewer\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/auth/register",
+          "protocol": "https",
+          "host": [
+            "fintrack-app-g6pc",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "signin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test4@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://fintrack-app-g6pc.onrender.com/api/v1/auth/login",
+          "protocol": "https",
+          "host": [
+            "fintrack-app-g6pc",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
